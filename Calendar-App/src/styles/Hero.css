@@ -18,19 +18,19 @@
     margin: 0 auto;
 }
 .content-left{
-    margin: 50px auto;
+    margin: 40px auto;
     max-width: 600px;
     min-width: 100px;
 
 }
 .content-right{
-margin: 50px auto;
+margin: 40px auto;
 }
 .hero-image{
     max-width: 500px;
 }
 .heading{
-    color: black;
+    color: #412f34;
     font-family: 'Poppins';
     font-size: 50px;
     font-style: normal;
@@ -39,7 +39,7 @@ margin: 50px auto;
 }
 .subheading{
     margin-top: 30px ;
-    color: black;
+    color: #654E55;
     font-family: 'Poppins';
     font-size: 30px;
     font-style: normal;
@@ -48,7 +48,7 @@ margin: 50px auto;
 }
 .detail{
     margin-top: 50px;
-    color: black;
+    color: #654E55;
     font-family: 'Poppins';
     font-size: 16px;
     font-style: normal;
