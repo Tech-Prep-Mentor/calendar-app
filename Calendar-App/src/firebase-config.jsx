@@ -3,13 +3,13 @@ import { initializeApp } from "firebase/app";
 import {getAuth, GoogleAuthProvider, signInWithPopup} from 'firebase/auth'
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAiVUxiZb90loEBjrhkOfK7fLy6eSCp5xw",
-  authDomain: "calendar-organizer-fab63.firebaseapp.com",
-  projectId: "calendar-organizer-fab63",
-  storageBucket: "calendar-organizer-fab63.appspot.com",
-  messagingSenderId: "504275874420",
-  appId: "1:504275874420:web:e03b141ec54a18e3375721",
-  measurementId: "G-6XK2FK31JR"
+  apiKey: "",
+  authDomain: "",
+  projectId: "",
+  storageBucket: "",
+  messagingSenderId: "",
+  appId: "",
+  measurementId: ""
 };
 
 const app = initializeApp(firebaseConfig);
