@@ -4,14 +4,17 @@ import Hero from './components/Hero.jsx'
 import Footer from './components/Footer.jsx'
 import Feature from './components/Feature.jsx'
 import Signin from './sign-in/Signin.jsx'
+import MyCalendar from './components/Calendar.jsx'
 import { BrowserRouter , Routes, Route } from 'react-router-dom'
 function App() {
   return (
     <div className="App">
-      <Navbar />
+<MyCalendar />
+
+      {/* <Navbar />
       <Hero />
       <Feature/>
-      <Footer/>
+      <Footer/> */}
     </div>
   )
 }
