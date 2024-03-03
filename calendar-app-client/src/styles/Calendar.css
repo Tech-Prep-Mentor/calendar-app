@@ -1,0 +1,160 @@
+.rbc-calendar {
+    font-family: 'Arial', sans-serif;
+    margin: 20px;
+}
+
+/* header styles */
+.rbc-header {
+    background-color: #f0f0f0;
+    color: #333;
+    padding: 5px 10px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+
+.rbc-month-view,
+.rbc-time-view,
+.rbc-agenda-view {
+    border: 1px solid #ddd;
+}
+
+.rbc-month-row {
+    border-bottom: 1px solid #ddd;
+}
+
+.rbc-date-cell {
+    padding: 8px;
+    border-right: 1px solid #ddd;
+}
+
+/* today's date*/
+.rbc-today {
+    background-color: #eaf6ff !important;
+}
+
+/* days outside the current month */
+.rbc-off-range-bg {
+    background-color: #f8f8f8 !important;
+}
+
+/* event styles */
+.rbc-event {
+    background-color: #3174ad;
+    color: #fff;
+    border-radius: 3px;
+    padding: 4px 8px;
+    border: none;
+    display: block;
+}
+
+.rbc-event:hover {
+    background-color: #265d8d;
+}
+
+/* toolbar styles */
+.rbc-toolbar {
+    margin-bottom: 10px;
+    padding: 10px 0;
+}
+
+.rbc-toolbar button {
+    background-color: #3174ad;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-left: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.rbc-toolbar button:hover {
+    background-color: #265d8d;
+}
+
+.rbc-btn-group {
+    display: flex;
+}
+
+
+.rbc-agenda-date-cell,
+.rbc-agenda-time-cell,
+.rbc-agenda-event-cell {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+}
+
+.calendar-task-container {
+    display: flex;
+    height: 500px;
+    width: 100%;
+}
+
+.calendar-container {
+    flex: 0 1 70%;
+    transition: flex 0.2s;
+}
+
+.calendar-container.full-width {
+    flex: 0 1 100%;
+    /* transition-duration: 0.5s; */
+}
+
+.task-container {
+    flex: 0 1 30%;
+    background-color: rgb(111, 111, 170);
+    margin: 20px;
+    transition: flex 0.2s;
+}
+
+.task-button {
+    display: flex;
+    margin: 20px;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+    .rbc-calendar {
+        margin: 10px;
+    }
+
+    .rbc-event {
+        padding: 2px 4px;
+        /* Adjust padding on smaller screens for events */
+    }
+
+    .rbc-toolbar button {
+        padding: 3px 6px;
+        /* Smaller padding for buttons on smaller screens */
+        font-size: 0.8rem;
+        /* Smaller font size for toolbar buttons */
+    }
+
+    .rbc-btn-group {
+        gap: 5px;
+        /* Reduce gap between buttons for a more compact layout */
+    }
+}
+
+/* Ensure toolbar does not stack vertically and elements fit on smaller screens */
+@media (max-width: 480px) {
+    .rbc-toolbar button {
+        padding: 2px 4px;
+        /* Further reduce padding for very small screens */
+        font-size: 0.7rem;
+        /* Further reduce font size for toolbar buttons */
+    }
+
+    .rbc-toolbar .rbc-btn-group {
+        display: grid;
+        /* Use grid layout for better control */
+        grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+        /* Adjust based on your button sizes */
+        width: 100%;
+        gap: 2px;
+        /* Adjust gap to ensure buttons do not touch */
+    }
+}
