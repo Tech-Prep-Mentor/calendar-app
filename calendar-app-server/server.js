@@ -3,12 +3,12 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 require('dotenv').config();
 
-const userRoutes = require('./routes/userRoutes');
-const semesterRoutes = require('./routes/semesterRoutes');
-const classRoutes = require('./routes/classRoutes');
-const assignmentRoutes = require('./routes/assignmentRoutes');
-const examRoutes = require('./routes/examRoutes');
-const eventRoutes = require('./routes/eventRoutes');
+const userRoutes = require('./routes/users');
+const semesterRoutes = require('./routes/semesters');
+const classRoutes = require('./routes/classes');
+const assignmentRoutes = require('./routes/assignments');
+const examRoutes = require('./routes/exams');
+const eventRoutes = require('./routes/events');
 
 
 const app = express();

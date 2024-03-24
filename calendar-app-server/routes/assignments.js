@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const Assignment = require('../models/Assignment');
-
+  
 // POST: Create a new assignment
 router.post('/', async (req, res) => {
   const newAssignment = new Assignment(req.body);
