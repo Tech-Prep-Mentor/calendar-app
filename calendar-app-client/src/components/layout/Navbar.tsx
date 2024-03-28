@@ -1,5 +1,7 @@
 import React from 'react'
 import '../../styles/Navbar.css'
+import LoginButton from '../LoginButton';
+import LogoutButton from '../LogoutButton';
 // import {Link} from 'react-router-dom'
 // import { signInWithGoogle } from '../firebase-config';
 function Navbar() {
@@ -13,7 +15,8 @@ function Navbar() {
                 <a className="navbar-title" href="">Feature</a>
                 <a className="navbar-title" href="">About Us</a>
                 {/* <div onClick={signInWithGoogle} className="navbar-title" href="">Login</div> */}
-                <a className="navbar-title" href="">Login</a>
+                <div className="navbar-title"><LoginButton /></div>
+                <div className="navbar-title"><LogoutButton/></div>
             </div>
         </div>
         </div>
