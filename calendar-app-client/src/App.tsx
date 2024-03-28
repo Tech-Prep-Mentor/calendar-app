@@ -5,10 +5,14 @@ import Hero from "./pages/Home/Hero";
 import Navbar from "./components/layout/Navbar";
 import Footer from "./components/layout/Footer";
 import Calendar from "./pages/calendar/Calendar";
+import LoginButton from './components/LoginButton';
+import LogoutButton from './components/LogoutButton';
 function App() {
   return (
     <Router>
       <div className="App">
+        <LoginButton/>
+        <LogoutButton/>
         <Routes>
           <Route
             path="/"
