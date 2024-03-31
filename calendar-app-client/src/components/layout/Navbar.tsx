@@ -1,9 +1,12 @@
 import React from 'react'
 import '../../styles/Navbar.css'
+// import login button and logout button
 import LoginButton from '../LoginButton';
 import LogoutButton from '../LogoutButton';
 // import {Link} from 'react-router-dom'
 // import { signInWithGoogle } from '../firebase-config';
+
+// created for auth0
 function Navbar() {
     return (
         <div className="navbar-wrapper">

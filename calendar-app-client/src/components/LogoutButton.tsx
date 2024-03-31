@@ -1,6 +1,6 @@
 import React from 'react';
 import { useAuth0 } from '@auth0/auth0-react';
-
+// created for auth0 
 function LogoutButton() {
     const { logout, isAuthenticated, isLoading } = useAuth0();
 
@@ -17,7 +17,7 @@ function LogoutButton() {
             </button>
         );
     } else {
-        // If the user is not authenticated, return null or any other content you prefer
+        // If the user is not authenticated, return null
         return null;
     }
 }

@@ -3,14 +3,17 @@ import ReactDOM from 'react-dom/client';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import "react-big-calendar/lib/css/react-big-calendar.css"
+// import Auth0Context 
 import { Auth0Provider } from "@auth0/auth0-react";
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
+// create for auth0
 const domain = "dev-0jpstfsi2h7rzogu.us.auth0.com";
 const clientId = "MQgG0zJ8ijXTWP1EleyupZ06Ow2srjwF";
 root.render(
   <React.StrictMode>
+    {/* Auth0Provider */}
     <Auth0Provider domain={domain} clientId={clientId} authorizationParams={{
       redirect_uri: window.location.origin }}><App /></Auth0Provider>
     
