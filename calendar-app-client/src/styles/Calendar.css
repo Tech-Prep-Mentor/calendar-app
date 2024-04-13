@@ -107,13 +107,26 @@
     transition: flex 0.2s;
 }
 
-.task-button {
+.button-group {
     display: flex;
+    justify-content: space-between; /* Aligns one button to the left and one to the right */
     margin: 20px;
+}
+
+.task-button, .create-button {
     padding: 5px 10px;
     border: none;
     cursor: pointer;
     border-radius: 5px;
+    color: white; /* Text color */
+}
+
+.task-button {
+    background-color: #3174ad; /* Blue background color */
+}
+
+.create-button {
+    background-color: #3174ad; /* Green background color */
 }
 
 @media (max-width: 768px) {
@@ -137,6 +150,15 @@
         gap: 5px;
         /* Reduce gap between buttons for a more compact layout */
     }
+    .button-group {
+        flex-direction: column;
+        align-items: stretch; /* Stretches buttons to full width of the container */
+    }
+
+    .task-button, .create-button {
+        margin-bottom: 10px;
+        width: 100%; /* Full width buttons on smaller screens */
+    }
 }
 
 /* Ensure toolbar does not stack vertically and elements fit on smaller screens */
@@ -157,4 +179,24 @@
         gap: 2px;
         /* Adjust gap to ensure buttons do not touch */
     }
+}
+.eventform-container {
+    position: absolute;       
+    background-color:white;
+    top: 50%;              
+    left: 50%;             
+    transform: translate(-50%, -50%); 
+    z-index: 1000;         
+    width: 80%;            
+    max-width: 500px;         
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+    padding: 20px;            
+    border-radius: 8px;       
+}
+
+.calendar-task-container {
+    position: relative;        
+    display: flex;
+    height: 500px;
+    width: 100%;
 }

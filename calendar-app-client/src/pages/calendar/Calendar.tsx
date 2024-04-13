@@ -1,7 +1,8 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import { Calendar, momentLocalizer, Event } from 'react-big-calendar';
 import moment from 'moment';
-import Task from './Task'; // Import your Task component here
+import EventForm from '../../components/EventForm';
+import Task from './Task';
 import 'react-big-calendar/lib/css/react-big-calendar.css';
 import '../../styles/Calendar.css';
 
@@ -13,6 +14,8 @@ interface MyEvent extends Event {
 
 const MyCalendar: React.FC = () => {
   const [showTask, setShowTask] = useState(false);
+  const [showEventForm, setShowEventForm] = useState(false); // State to control EventForm visibility
+
   const events: MyEvent[] = [
     {
       start: moment().toDate(),
@@ -20,17 +23,24 @@ const MyCalendar: React.FC = () => {
       title: 'Sample Event',
     },
   ];
-      
+
   const toggleTaskVisibility = () => {
     setShowTask(!showTask);
+  };
+
+  const handleCreateEvent = () => {
+    setShowEventForm(true); // Show the EventForm
   };
   
   return (
     <div className="calendar-task-container">
       <div className={showTask ? "calendar-container" : "calendar-container full-width"}>
-        <button onClick={toggleTaskVisibility} className="task-button">
-          {showTask ? 'Hide Tasks' : 'Show Tasks'}
-        </button>
+        <div className='button-group'>
+          <button onClick={handleCreateEvent} className="create-button">Create</button>       
+          <button onClick={toggleTaskVisibility} className="task-button">
+            {showTask ? 'Hide Tasks' : 'Show Tasks'}
+          </button>
+        </div>
         <Calendar
           localizer={localizer}
           events={events}
@@ -43,6 +53,11 @@ const MyCalendar: React.FC = () => {
       {showTask && (
         <div className="task-container">
           <Task />
+        </div>
+      )}
+      {showEventForm && (
+        <div className="eventform-container">
+          <EventForm/>
         </div>
       )}
     </div>
