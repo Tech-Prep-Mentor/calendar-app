@@ -14,14 +14,23 @@ interface MyEvent extends Event {
 
 const MyCalendar: React.FC = () => {
   const [showTask, setShowTask] = useState(false);
-  const [showEventForm, setShowEventForm] = useState(false); // State to control EventForm visibility
-
+  const [showEventForm, setShowEventForm] = useState(false); 
   const events: MyEvent[] = [
     {
-      start: moment().toDate(),
-      end: moment().add(1, 'days').toDate(),
-      title: 'Sample Event',
+      title: "After DST",
+      start: new Date("2024-04-13T09:00:00"),
+      end: new Date("2024-04-13T10:00:00")
     },
+    {
+      title: "Lunch Meeting",
+      start: new Date("2024-04-13T12:00:00"),
+      end: new Date("2024-04-13T13:00:00")
+    },
+    {
+      title: "Project Review",
+      start: new Date("2024-04-13T15:00:00"),
+      end: new Date("2024-04-13T16:30:00")
+    }
   ];
 
   const toggleTaskVisibility = () => {
