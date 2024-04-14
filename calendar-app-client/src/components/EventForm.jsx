@@ -114,6 +114,7 @@ const EventForm = () => {
           onChange={handleEventChange('startDate')}
         />
       )}
+      <button>Save</button>
     </form>
   );
 };
