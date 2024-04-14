@@ -37,16 +37,14 @@ const MyCalendar: React.FC = () => {
     setShowTask(!showTask);
   };
 
+
   const handleCreateEvent = () => {
     setShowEventForm(true); // Show the EventForm
   };
-  const CloseCreateEvent = () => {
-    if (showEventForm)
-    setShowEventForm(false)
-  }
+
   
   return (
-    <div className="calendar-task-container" onClick={CloseCreateEvent}>
+    <div className="calendar-task-container">
       <div className={showTask ? "calendar-container" : "calendar-container full-width"}>
         <div className='button-group'>
           <button onClick={handleCreateEvent} className="create-button">Create</button>       
